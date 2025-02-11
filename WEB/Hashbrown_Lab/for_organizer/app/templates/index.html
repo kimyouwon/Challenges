@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashbrown Lab - Secure Access</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+    <br><br><h2>Hashbrown Lab</h2><br>    
+    <div class="container">
+        <form method="POST">
+            <br><label for="cmd">SECRET</label><br>
+            <input type="text" name="cmd" id="cmd" required><br><br>
+            <button type="submit">Execute</button><br><br>
+        </form>
+    </div>
+
+    {% if result %}
+        <div class="output">
+            <p>{{ result }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
